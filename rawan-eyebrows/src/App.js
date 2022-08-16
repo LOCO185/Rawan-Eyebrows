@@ -8,6 +8,17 @@ import "react-big-calendar/lib/css/react-big-calendar.css";
 import React from "react";
 import DatePicker from "react-datepicker";
 
+const locales = {
+  "he-IL": requestAnimationFrame("date-fns/locale/he-IL"),
+};
+const localizer = dateFnsLocalizer({
+  format,
+  parse,
+  startOfWeek,
+  getDay,
+  locales,
+});
+
 function App() {
   return (
     <div className="App">
