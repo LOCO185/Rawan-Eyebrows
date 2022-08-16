@@ -19,6 +19,24 @@ const localizer = dateFnsLocalizer({
   locales,
 });
 
+const events = [
+  {
+    title: "first",
+    start: new Date(2022, 8, 0),
+    end: new Date(2022, 8, 0),
+  },
+  {
+    title: "second",
+    start: new Date(2022, 8, 0),
+    end: new Date(2022, 8, 0),
+  },
+  {
+    title: "third",
+    start: new Date(2022, 8, 0),
+    end: new Date(2022, 8, 0),
+  },
+];
+
 function App() {
   return (
     <div className="App">
