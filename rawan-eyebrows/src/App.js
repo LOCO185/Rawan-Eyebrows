@@ -11,13 +11,14 @@ import DatePicker from "react-datepicker";
 const locales = {
   "he-IL": requestAnimationFrame("date-fns/locale/he-IL"),
 };
-// const localizer = dateFnsLocalizer({
-//   format,
-//   parse,
-//   startOfWeek,
-//   getDay,
-//   locales,
-// });
+
+const localizer = dateFnsLocalizer({
+  format,
+  parse,
+  startOfWeek,
+  getDay,
+  locales,
+});
 
 const events = [
   {
