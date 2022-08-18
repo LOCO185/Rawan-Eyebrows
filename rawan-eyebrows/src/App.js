@@ -59,6 +59,17 @@ function App() {
           value={newEvent.title}
           onChange={(e) => setNewEvent({ ...newEvent, title: e.target.value })}
         />
+        <DatePicker
+          placeholderText="Start Date"
+          style={{ marginRight: "10px" }}
+          selected={newEvent.start}
+          onChange={(start) => setNewEvent({ ...newEvent, start })}
+        />
+        {/* <DatePicker
+          placeholderText="End Date"
+          selected={newEvent.end}
+          onChange={(end) => setNewEvent({ ...newEvent, end })}
+        /> */}
       </div>
     </div>
   );
