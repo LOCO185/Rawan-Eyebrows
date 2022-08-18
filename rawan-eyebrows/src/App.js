@@ -41,7 +41,10 @@ const events = [
 function App() {
   const [newEvent, setNewEvent] = useState({ title: "", start: "", end: "" });
   const [allEvents, setAllEvents] = useState(events);
-  
+
+  function handleAddEvent() {
+    setAllEvents([...allEvents, newEvent]);
+  }
   return (
     <div className="App">
       <h1>Calendar</h1>
