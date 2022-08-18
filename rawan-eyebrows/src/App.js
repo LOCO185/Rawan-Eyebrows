@@ -45,11 +45,20 @@ function App() {
   function handleAddEvent() {
     setAllEvents([...allEvents, newEvent]);
   }
+
   return (
     <div className="App">
       <h1>Calendar</h1>
       <h2>Add New Event</h2>
-      <div></div>
+      <div>
+        <input
+          type="text"
+          placeholder="Add Title"
+          style={{ width: "20%", marginRight: "10px" }}
+          value={newEvent.title}
+          onChange={(e) => setNewEvent({ ...newEvent, title: e.target.value })}
+        />
+      </div>
     </div>
   );
 }
