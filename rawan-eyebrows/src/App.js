@@ -5,7 +5,7 @@ import parse from "date-fns/parse";
 import startOfWeek from "date-fns/startOfWeek";
 import getDay from "date-fns/getDay";
 import "react-big-calendar/lib/css/react-big-calendar.css";
-import React from "react";
+import React, { useState } from "react";
 import DatePicker from "react-datepicker";
 
 const locales = {
@@ -39,6 +39,9 @@ const events = [
 ];
 
 function App() {
+  const [newEvent, setNewEvent] = useState({ title: "", start: "", end: "" });
+  const [allEvents, setAllEvents] = useState(events);
+  
   return (
     <div className="App">
       <h1>Calendar</h1>
