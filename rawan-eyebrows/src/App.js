@@ -70,6 +70,9 @@ function App() {
           selected={newEvent.end}
           onChange={(end) => setNewEvent({ ...newEvent, end })}
         />
+        <button stlye={{ marginTop: "10px" }} onClick={handleAddEvent}>
+          Add Event
+        </button>
       </div>
     </div>
   );
