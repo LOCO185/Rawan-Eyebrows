@@ -9,9 +9,9 @@ import React, { useState } from "react";
 import DatePicker from "react-datepicker";
 
 // locales need to be fixed to IL
-// const locales = {
-//   "he-IL": requestAnimationFrame("date-fns/locale/he-IL"),
-// };
+const locales = {
+  "he-IL": requestAnimationFrame("date-fns/locale/he-IL"),
+};
 
 const localizer = dateFnsLocalizer({
   format,
