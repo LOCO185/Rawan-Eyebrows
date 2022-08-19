@@ -74,6 +74,13 @@ function App() {
           Add Event
         </button>
       </div>
+      <Calendar
+        localizer={localizer}
+        events={allEvents}
+        startAccessor="start"
+        endAccessor="end"
+        style={{ height: 500, margin: "50px" }}
+      />
     </div>
   );
 }
