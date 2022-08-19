@@ -18,7 +18,7 @@ const localizer = dateFnsLocalizer({
   parse,
   startOfWeek,
   getDay,
-  // locales,
+  locales,
 });
 
 const events = [
