@@ -7,6 +7,8 @@ import TextField from "material-ui/TextField";
 import TimePicker from "material-ui/TimePicker";
 require("react-big-calendar/lib/css/react-big-calendar.css");
 
+BigCalendar.momentLocalizer(moment);
+
 const Calendar = () => {
   return <div>Calendar</div>;
 };
