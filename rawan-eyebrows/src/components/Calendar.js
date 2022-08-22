@@ -41,7 +41,7 @@ class Calendar extends Component {
       openSlot: true,
     });
   }
-  
+
   handleEventSelected(event) {
     console.log("event", event);
     this.setState({
@@ -52,6 +52,10 @@ class Calendar extends Component {
       title: event.title,
       desc: event.desc,
     });
+  }
+  
+  setTitle(e) {
+    this.setState({ title: e });
   }
   render() {}
 }
