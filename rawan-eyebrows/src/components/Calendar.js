@@ -24,7 +24,11 @@ class Calendar extends Component {
     };
     this.handleClose = this.handleClose.bind(this);
   }
-
+  
+  //closes modals
+  handleClose() {
+    this.setState({ openEvent: false, openSlot: false });
+  }
   render() {}
 }
 export default Calendar;
