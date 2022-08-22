@@ -24,10 +24,22 @@ class Calendar extends Component {
     };
     this.handleClose = this.handleClose.bind(this);
   }
-  
+
   //closes modals
   handleClose() {
     this.setState({ openEvent: false, openSlot: false });
+  }
+
+  //  Allows user to click on calendar slot and handles if appointment exists
+  handleSlotSelected(slotInfo) {
+    console.log("Real slotInfo", slotInfo);
+    this.setState({
+      title: "",
+      desc: "",
+      start: slotInfo.start,
+      end: slotInfo.end,
+      openSlot: true,
+    });
   }
   render() {}
 }
