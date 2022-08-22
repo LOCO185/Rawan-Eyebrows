@@ -61,7 +61,11 @@ class Calendar extends Component {
   setDescription(e) {
     this.setState({ desc: e });
   }
-  
+
+  handleStartTime = (event, date) => {
+    this.setState({ start: date });
+  };
+
   render() {}
 }
 export default Calendar;
