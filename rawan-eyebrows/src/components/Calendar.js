@@ -41,6 +41,18 @@ class Calendar extends Component {
       openSlot: true,
     });
   }
+  
+  handleEventSelected(event) {
+    console.log("event", event);
+    this.setState({
+      openEvent: true,
+      clickedEvent: event,
+      start: event.start,
+      end: event.end,
+      title: event.title,
+      desc: event.desc,
+    });
+  }
   render() {}
 }
 export default Calendar;
