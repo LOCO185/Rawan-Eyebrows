@@ -105,7 +105,7 @@ class Calendar extends Component {
   }
 
   render() {
-    
+    console.log("render()");
   }
 }
 export default Calendar;
