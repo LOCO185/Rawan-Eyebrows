@@ -106,6 +106,30 @@ class Calendar extends Component {
 
   render() {
     console.log("render()");
+    const eventActions = [
+      <FlatButton
+        label="Cancel"
+        primary={false}
+        keyboardFocused={true}
+        onClick={this.handleClose}
+      />,
+      <FlatButton
+        label="Delete"
+        secondary={true}
+        keyboardFocused={true}
+        onClick={() => {
+          this.deleteEvent(), this.handleClose();
+        }}
+      />,
+      <FlatButton
+        label="Confirm Edit"
+        primary={true}
+        keyboardFocused={true}
+        onClick={() => {
+          this.updateEvent(), this.handleClose();
+        }}
+      />,
+    ];
   }
 }
 export default Calendar;
