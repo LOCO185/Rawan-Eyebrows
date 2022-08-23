@@ -104,6 +104,8 @@ class Calendar extends Component {
     this.setState({ events: updatedEvents });
   }
 
-  render() {}
+  render() {
+    
+  }
 }
 export default Calendar;
