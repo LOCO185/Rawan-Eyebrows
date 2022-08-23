@@ -80,6 +80,21 @@ class Calendar extends Component {
       this.setState({ events });
     }
   
+      //  Updates Existing Appointments Title and/or Description
+  updateEvent() {
+    const { title, desc, start, end, events, clickedEvent } = this.state;
+    const index = events.findIndex(event => event === clickedEvent);
+    const updatedEvent = events.slice();
+    updatedEvent[index].title = title;
+    updatedEvent[index].desc = desc;
+    updatedEvent[index].start = start;
+    updatedEvent[index].end = end;
+    // localStorage.setItem("cachedEvents", JSON.stringify(updatedEvent));
+    this.setState({
+      events: updatedEvent
+    });
+  }
+  
   render() {}
 }
 export default Calendar;
