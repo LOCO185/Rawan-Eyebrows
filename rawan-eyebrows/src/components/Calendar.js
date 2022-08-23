@@ -130,6 +130,17 @@ class Calendar extends Component {
         }}
       />,
     ];
+    const appointmentActions = [
+      <FlatButton label="Cancel" secondary={true} onClick={this.handleClose} />,
+      <FlatButton
+        label="Submit"
+        primary={true}
+        keyboardFocused={true}
+        onClick={() => {
+          this.setNewAppointment(), this.handleClose();
+        }}
+      />,
+    ];
   }
 }
 export default Calendar;
