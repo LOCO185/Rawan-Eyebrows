@@ -70,6 +70,16 @@ class Calendar extends Component {
     this.setState({ end: date });
   };
 
+    // Onclick callback function that pushes new appointment into events array.
+    setNewAppointment() {
+      const { start, end, title, desc } = this.state;
+      let appointment = { title, start, end, desc };
+      let events = this.state.events.slice();
+      events.push(appointment);
+      // localStorage.setItem("cachedEvents", JSON.stringify(events));
+      this.setState({ events });
+    }
+  
   render() {}
 }
 export default Calendar;
