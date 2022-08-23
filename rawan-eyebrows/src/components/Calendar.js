@@ -70,20 +70,20 @@ class Calendar extends Component {
     this.setState({ end: date });
   };
 
-    // Onclick callback function that pushes new appointment into events array.
-    setNewAppointment() {
-      const { start, end, title, desc } = this.state;
-      let appointment = { title, start, end, desc };
-      let events = this.state.events.slice();
-      events.push(appointment);
-      // localStorage.setItem("cachedEvents", JSON.stringify(events));
-      this.setState({ events });
-    }
-  
-      //  Updates Existing Appointments Title and/or Description
+  // Onclick callback function that pushes new appointment into events array.
+  setNewAppointment() {
+    const { start, end, title, desc } = this.state;
+    let appointment = { title, start, end, desc };
+    let events = this.state.events.slice();
+    events.push(appointment);
+    // localStorage.setItem("cachedEvents", JSON.stringify(events));
+    this.setState({ events });
+  }
+
+  //  Updates Existing Appointments Title and/or Description
   updateEvent() {
     const { title, desc, start, end, events, clickedEvent } = this.state;
-    const index = events.findIndex(event => event === clickedEvent);
+    const index = events.findIndex((event) => event === clickedEvent);
     const updatedEvent = events.slice();
     updatedEvent[index].title = title;
     updatedEvent[index].desc = desc;
@@ -91,10 +91,19 @@ class Calendar extends Component {
     updatedEvent[index].end = end;
     // localStorage.setItem("cachedEvents", JSON.stringify(updatedEvent));
     this.setState({
-      events: updatedEvent
+      events: updatedEvent,
     });
   }
-  
+
+  //  filters out specific event that is to be deleted and set that variable to state
+  deleteEvent() {
+    let updatedEvents = this.state.events.filter(
+      (event) => event["start"] !== this.state.start
+    );
+    // localStorage.setItem("cachedEvents", JSON.stringify(updatedEvents));
+    this.setState({ events: updatedEvents });
+  }
+
   render() {}
 }
 export default Calendar;
