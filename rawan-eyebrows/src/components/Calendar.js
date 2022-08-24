@@ -193,17 +193,6 @@ class Calendar extends Component {
             onChange={this.handleEndTime}
           />
         </Dialog>
-
-        {/* Material-ui Modal for Existing Event */}
-        <Dialog
-          title={`View/Edit Appointment of ${moment(this.state.start).format(
-            "MMMM Do YYYY"
-          )}`}
-          actions={eventActions}
-          modal={false}
-          open={this.state.openEvent}
-          onRequestClose={this.handleClose}
-        >
       </div>
     );
   }
