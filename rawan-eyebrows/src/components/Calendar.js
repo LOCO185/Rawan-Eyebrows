@@ -204,14 +204,6 @@ class Calendar extends Component {
           open={this.state.openEvent}
           onRequestClose={this.handleClose}
         >
-          <TextField
-            defaultValue={this.state.title}
-            floatingLabelText="Title"
-            onChange={(e) => {
-              this.setTitle(e.target.value);
-            }}
-          />
-          <br />
       </div>
     );
   }
