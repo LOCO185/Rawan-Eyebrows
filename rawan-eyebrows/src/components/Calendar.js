@@ -212,14 +212,6 @@ class Calendar extends Component {
             }}
           />
           <br />
-          <TextField
-            floatingLabelText="Description"
-            multiLine={true}
-            defaultValue={this.state.desc}
-            onChange={(e) => {
-              this.setDescription(e.target.value);
-            }}
-          />
       </div>
     );
   }
