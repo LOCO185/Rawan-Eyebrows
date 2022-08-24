@@ -227,14 +227,6 @@ class Calendar extends Component {
             value={this.state.start}
             onChange={this.handleStartTime}
           />
-          <TimePicker
-            format="ampm"
-            floatingLabelText="End Time"
-            minutesStep={5}
-            value={this.state.end}
-            onChange={this.handleEndTime}
-          />
-        </Dialog>
       </div>
     );
   }
