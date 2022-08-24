@@ -220,13 +220,6 @@ class Calendar extends Component {
               this.setDescription(e.target.value);
             }}
           />
-          <TimePicker
-            format="ampm"
-            floatingLabelText="Start Time"
-            minutesStep={5}
-            value={this.state.start}
-            onChange={this.handleStartTime}
-          />
       </div>
     );
   }
